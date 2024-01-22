@@ -22,7 +22,7 @@ public class BankDAOTest {
     @Test
     public void selectByNumber_test(){
         // given
-        int number = 4;
+        int number = 7;
 
         // when
         BankDAO dao = new BankDAO();
@@ -43,7 +43,7 @@ public class BankDAOTest {
     @Test
     public void deleteByNumber_test(){
         // given = 파라미터
-        int number = 2;
+        int number = 4;
 
         // when = 본코드 실행
         BankDAO dao = new BankDAO();
