@@ -10,17 +10,21 @@ public class DBConnectionTest {
     // 리턴타입을 적을 수 없다.
     // 매개변수를 적을 수 없다.
     // @Test 붙이면 메서드 별로 실행 가능
+
+    // Test 주도 개발 (본코드를 먼저 작성하고 본코드를 테스트 하는 식으로 진행)
     @Test
     public void getInstance_test(){
-        String username = "root";
-        String password = "1234";
-        String url = "jdbc:mariadb://localhost:3306/cosdb";
+        // given = 파라미터
 
-        // 프로토콜이 적용된 소켓
-        try {
-            Connection conn = DriverManager.getConnection(url,username,password);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        // when = 본코드 실행
+        Connection conn = DBConnection.getInstance();
+
+        // then = 눈 검증
+        if(conn == null){
+            System.out.println("실패");
+        }else{
+            System.out.println("성공");
         }
+
     }
 }
