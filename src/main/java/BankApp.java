@@ -22,7 +22,7 @@ public class BankApp {
 
         System.out.println("메서드를 입력하세요");
         String method = sc.nextLine();
-        System.out.println("주소를 입력하세요");
+        System.out.println("식별자를 입력하세요");
         String action = sc.nextLine();
 
         String body = "";
@@ -30,6 +30,7 @@ public class BankApp {
         BankDAO bankDAO = new BankDAO();
 
         if (method.equals("GET")){
+            // 식별자 끝자리 숫자
             String[] st1 = action.split("/");
             int number = Integer.parseInt(st1[2]);
 
